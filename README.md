@@ -15,7 +15,8 @@ The open / filled white dots represent the current stuntsheet while purple dots 
 
 ### Constraints
 * Only a single marcher per grid-square at a given time.
-* Marchers may only move either East/West or North/South at a single time (assuming no diagonals are allowed).
+* Marchers may only move either East/West or North/South during their movement, or may pivot in place which takes a single tick.
+** **Simplification**: No diagonals are allowed.
 * Marchers may start moving either in the East/West or North/South direction, and are only allowed **a single pivot** during their movement.
   * ex: **Move West 4 dots - pivot North - Move North 6 dots** is allowed, but **Move West 4 dots - pivot North - Move North 6 dots - Pivot East - Move East 2 dots** is not allowed because we pivot twice in a single path to reach the next dot.
 * Nearby points have similar paths
